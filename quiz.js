@@ -522,7 +522,7 @@ function shareScore() {
         whatsappNumber = '+91' + whatsappNumber;
     }
 
-    const scoreMessage = `Your score is ${userScore} / ${selectedQuestions.length}. Check out the quiz at [Your Website Link]`;
+    const scoreMessage = `Your score is ${userScore} / ${selectedQuestions.length}. Check out the quiz at [https://advance-java-programming-awt-mcq.vercel.app/]`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(scoreMessage)}`;
 
     window.open(whatsappUrl, '_blank');
