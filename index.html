@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the MCQ Quiz</h1>
+        <h2>Question Bank for Multiple Choice Questions</h2>
+        <h3>Program: Diploma in Computer Engineering</h3>
+        <h4>Scheme: I </h4>
+        <h4>Course: Advanced Java Programming </h4>
+        <h4>Program Code: CW</h4>
+        <h4>Course Code: 22517</h4>
+        <h4>Semester: V </h4>
+        <h4>College: Somayya Polytechnic in Chandrapur</h4>
+
+        <div id="welcome">
+            <label for="username">Enter your name:</label>
+            <input type="text" id="username" placeholder="Your Name" required>
+            <button class="btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <div id="question-selection" style="display:none;">
+            <h2>Select the number of questions:</h2>
+            <button class="btn" onclick="selectQuestions(10)">10 Questions</button>
+            <button class="btn" onclick="selectQuestions(20)">20 Questions</button>
+            <button class="btn" onclick="selectQuestions(30)">30 Questions</button>
+            <button class="btn" onclick="selectQuestions(70)">70 Questions</button>
+        </div>
+
+        <div id="quiz" style="display:none;">
+            <div id="questions-container"></div>
+            <button class="btn" onclick="submitQuiz()">Submit Quiz</button>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h2>Your Score: <span id="score"></span></h2>
+            <label for="whatsapp-number">Enter your friend's WhatsApp number:</label>
+            <input type="text" id="whatsapp-number" placeholder="Start with +91 ">
+            <button class="btn" onclick="shareScore()">Share on WhatsApp</button>
+            <button class="btn" onclick="location.reload()">Test Again</button>
+        </div>
+
+        <div id="history" style="display:none;">
+            <h2>Quiz History</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
